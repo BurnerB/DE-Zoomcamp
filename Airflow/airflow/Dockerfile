@@ -6,6 +6,7 @@ ENV AIRFLOW_HOME=/opt/airflow
 
 USER root
 RUN apt-get update -qq && apt-get install vim -qqq
+RUN pip install --no-cache-dir pandas sqlalchemy pscopg2-binary
 # git gcc g++ -qqq
 
 COPY requirements.txt .
